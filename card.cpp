@@ -1,13 +1,11 @@
 #include "Card.h"
 
-using namespace std;
-
 static const char* SuitStr(Suit s) {
     switch (s) {
-    case Suit::Hearts: return "H";
-    case Suit::Diamonds: return "D";
-    case Suit::Clubs: return "C";
-    case Suit::Spades: return "S";
+    case Suit::Hearts: return " Hearts";
+    case Suit::Diamonds: return " Diamonds";
+    case Suit::Clubs: return " Clubs";
+    case Suit::Spades: return " Spades";
     }
     return "?";
 }
@@ -31,6 +29,6 @@ static const char* RankStr(Rank r) {
     return "?";
 }
 
-string Card::ToString() const {
-    return string(RankStr(rank)) + SuitStr(suit);
+std::string Card::ToString() const {
+    return std::string(RankStr(rank)) + SuitStr(suit);
 }

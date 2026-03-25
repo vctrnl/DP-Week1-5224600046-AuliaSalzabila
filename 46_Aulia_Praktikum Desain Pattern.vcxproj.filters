@@ -33,6 +33,9 @@
     <ClCompile Include="RunSession.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="modifierfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="card.h">
@@ -48,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RunSession.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modifiercard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="modifierfactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

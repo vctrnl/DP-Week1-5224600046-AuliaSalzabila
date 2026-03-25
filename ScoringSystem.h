@@ -2,8 +2,6 @@
 #include <vector>
 #include "Card.h"
 
-using namespace std;
-
 class ScoringSystem {
 public:
     enum class HandType {
@@ -26,17 +24,17 @@ public:
     };
 
     // cardsPlayed maksimal 5 kartu. Idealnya tepat 5 untuk evaluasi combo poker.
-    BaseScore EvaluateBase(const vector<Card>& cardsPlayed) const;
+    BaseScore EvaluateBase(const std::vector<Card>& cardsPlayed) const;
 
 private:
-    HandType EvaluateHandType5(const vector<Card>& v) const;
+    HandType EvaluateHandType5(const std::vector<Card>& v) const;
 
-    bool IsFlush5(const vector<Card>& v) const;
-    bool IsStraight5(const vector<Card>& v) const;
+    bool IsFlush5(const std::vector<Card>& v) const;
+    bool IsStraight5(const std::vector<Card>& v) const;
 
-    void BuildRankCounts5(const vector<Card>& v, int counts[15]) const;
+    void BuildRankCounts5(const std::vector<Card>& v, int counts[15]) const;
 
-    int SumRanksAsChips(const vector<Card>& v) const;
+    int SumRanksAsChips(const std::vector<Card>& v) const;
 
     int CountPairs(const int counts[15]) const;
     bool HasNOfAKind(const int counts[15], int n) const;

@@ -3,17 +3,15 @@
 #include <random>
 #include "Card.h"
 
-using namespace std;
-
 class Deck {
 public:
     void GenerateStandard52();
-    void Shuffle(mt19937& rng);
+    void Shuffle(std::mt19937& rng);
 
     Card Draw();
     int Size() const;
     bool Empty() const;
 
 private:
-    vector<Card> cards;
+    std::vector<Card> cards;
 };

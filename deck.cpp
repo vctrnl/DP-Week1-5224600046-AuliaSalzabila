@@ -2,8 +2,6 @@
 #include <algorithm>
 #include <stdexcept>
 
-using namespace std;
-
 void Deck::GenerateStandard52() {
     cards.clear();
     cards.reserve(52);
@@ -15,12 +13,12 @@ void Deck::GenerateStandard52() {
     }
 }
 
-void Deck::Shuffle(mt19937& rng) {
-    shuffle(cards.begin(), cards.end(), rng);
+void Deck::Shuffle(std::mt19937& rng) {
+    std::shuffle(cards.begin(), cards.end(), rng);
 }
 
 Card Deck::Draw() {
-    if (cards.empty()) throw runtime_error("Deck empty");
+    if (cards.empty()) throw std::runtime_error("Deck empty");
     Card c = cards.back();
     cards.pop_back();
     return c;

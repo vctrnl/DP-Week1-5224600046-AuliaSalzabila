@@ -4,8 +4,6 @@
 #include <algorithm>
 #include "Card.h"
 
-using namespace std;
-
 class Hand {
 public:
     static const int MAX_PLAY = 5;
@@ -14,15 +12,15 @@ public:
     void Add(const Card& c);
 
     int Size() const;
-    const vector<Card>& Cards() const;
+    const std::vector<Card>& Cards() const;
 
     // Ambil maksimal 5 kartu dari tangan berdasarkan index.
     // Index pakai 0..Size-1.
     // Menghapus kartu yang dimainkan dari tangan, lalu mengembalikan kartu yang dimainkan.
-    vector<Card> PlaySelected(const vector<int>& indices);
+    std::vector<Card> PlaySelected(const std::vector<int>& indices);
 
 private:
-    vector<Card> cards;
+    std::vector<Card> cards;
 
-    void ValidatePlay(const vector<int>& indices) const;
+    void ValidatePlay(const std::vector<int>& indices) const;
 };
